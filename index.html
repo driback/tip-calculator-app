@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./app/dist/css/style.min.css" />
+    <title>Frontend Mentor | Tip calculator app</title>
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <img src="./images/logo.svg" alt="" />
+      </header>
+      <main class="main">
+        <section class="bill">
+          <div class="bill__title">
+            <span>bill</span>
+            <span id="bred"></span>
+          </div>
+          <input
+            type="text"
+            name="bill"
+            id="bill"
+            class="bill__input"
+            placeholder="0"
+            value=""
+          />
+        </section>
+        <section class="tip">
+          <span class="tip__title">Select Tip </span>
+          <div class="tip__numbers">
+            <span class="tip__tips">5%</span><span class="tip__tips">10%</span
+            ><span class="tip__tips">15%</span><span class="tip__tips">25%</span
+            ><span class="tip__tips">50%</span>
+            <input type="text" name="custom" id="custom" placeholder="Custom" />
+          </div>
+        </section>
+        <section class="people">
+          <div class="people__title">
+            <span>number of people</span>
+            <span id="pred"></span>
+          </div>
+          <input
+            type="text"
+            name="people"
+            id="people"
+            class="people__input"
+            placeholder="0"
+            value=""
+          />
+        </section>
+        <section class="total">
+          <div class="total__amount">
+            <div><span>tip amount</span><span>/ person</span></div>
+            <span class="totaltipamount"></span>
+          </div>
+          <div class="total__total">
+            <div><span>total</span><span>/ person</span></div>
+            <span class="totalbill"></span>
+          </div>
+          <button class="total__reset" id="reset">reset</button>
+        </section>
+      </main>
+    </div>
+    <script src="./index.js"></script>
+  </body>
+</html>

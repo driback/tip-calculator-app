@@ -1,0 +1,69 @@
+@use "../util/" as u;
+
+@include u.breakpoint(laptop) {
+  body {
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+  }
+  .container {
+    width: 55rem;
+    // border: 1px solid red;
+    margin-inline: auto;
+  }
+
+  .header {
+    padding: 0;
+    padding-bottom: 2.5rem;
+  }
+
+  .main {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(30%, 1fr));
+    padding: 2rem;
+    column-gap: 2rem;
+    border-radius: 1.5rem;
+
+    &::before {
+      position: absolute;
+      content: "";
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+        rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+      opacity: 0.1;
+      z-index: -1;
+    }
+  }
+
+  .bill {
+    grid-column: 1/2;
+    grid-row: 1/2;
+  }
+
+  .tip {
+    grid-column: 1/2;
+    grid-row: 2/3;
+
+    &__numbers {
+      grid-template-columns: repeat(3, minmax(30%, 33%));
+    }
+  }
+
+  .people {
+    grid-column: 1/2;
+    grid-row: 3/4;
+  }
+
+  .total {
+    grid-column: 2/3;
+    grid-row: 1/4;
+
+    &__reset {
+      margin-top: auto;
+    }
+  }
+}
